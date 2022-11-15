@@ -1,0 +1,29 @@
+<div class="card-container">
+
+{{#if products.length }}
+    {{#each products}}
+            <div class="card" data-id="{{id}}">
+                <!-- <a href="#" class="card__link">Comprar</a> -->
+                <article class="card__article">
+                    <div class="card__image-container">
+                        <img src={{img}} alt="Producto" class="card__image">
+                    </div>
+                    <div class="card__content">
+                        <h2 class="card__heading">{{name}}</h2>
+                        <h3 class="card__product-price">{{price}}</h3>
+                        <div class="card__description">
+                            <p>{{description}}</p>
+                        </div>
+                            <div>
+                                
+                            <button class="card__link" id="{{id}}">Agregar</button>
+
+                            </div>
+                    </div>
+                </article>
+            </div>
+    {{/each}}
+        {{else}}
+            <h2>No se encontraron productos</h2>
+        {{/if}}
+</div>    

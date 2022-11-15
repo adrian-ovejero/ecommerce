@@ -1,0 +1,347 @@
+
+.form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	position: relative;
+	gap: 1em;
+	border: solid #14213d;
+	box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+	width: 75%;
+	margin: 0 auto;
+	padding: 10px;
+	flex-direction: column;
+
+	@media (min-width: 768px) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+.product-registration {
+	margin: 10px;
+	text-align: center;
+}
+
+.form__product {
+	width: 70%;
+	position: relative;
+	display: flex;
+	gap: 2px;
+	flex-direction: column;
+	margin: 0 auto;
+
+	&-label {
+		font-weight: 700;
+		cursor: pointer;
+
+		&--textarea {
+			width: 100%;
+			height: 10px;
+			resize: vertical;
+			margin-bottom: 5px;
+		}
+
+		@media (min-width: 768px) {
+			// display: block;
+		}
+	}
+
+	&-input {
+		background: #fff;
+		border-radius: 5px;
+		transition: .3s ease all;
+		flex: 1 1 auto;
+
+		&:focus {
+			border: 3px solid #314c85;
+			outline: none;
+			box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+		}
+	}
+}
+
+.form::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fca311;
+    clip-path: circle(300px at 80% 20%);
+    transition: 0.5s ease-in-out;
+    border-radius: 5px;
+
+}
+
+
+/************* validaciones de alta ***********************/
+
+
+
+.main-form {
+    color: #14213d;
+    padding: 20px 0;
+    margin-top: 18px;
+
+    & label {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+
+    &__input-error {
+        display: none;
+    }
+
+    &__input-activo {
+        display: block;
+        padding: 0 20px;
+    }
+
+    &__correcto {
+        color: green;
+    }
+
+    &__incorrecto {
+        color: red;
+    }
+
+    &__success {
+        display: none;
+        font-size: 25px;
+    }
+
+    &__success__activo {
+        display: block;
+        padding: 0 20px;
+    }
+
+    &__error {
+        font-size: 25px;
+        display: none;
+    }
+
+    &__error__activo {
+        display: block;
+        padding: 0 20px;
+    }
+
+
+    & input {
+        margin: 5px auto 15px auto;
+        display: block;
+        width: 70%;
+        padding: 7px 3px;
+        border: 1px solid #14213d;
+        border-radius: 3px;
+        text-align: left;
+        color: black;
+        min-width: 100px;
+
+        &:hover {
+            background-color: #d6e2de;
+            color: #6a7ba0;
+            cursor: pointer;
+        }
+
+        &:focus{
+            background-color: #d6e2de;
+            color: #14213d;
+        }
+    }
+
+    & button {
+        box-shadow: inset 0px 1px 0px 0px #ffffff;
+        background-color: #ffffff;
+        border-radius: 6px;
+        border: 2px solid #14213d;
+        display: inline-block;
+        cursor: pointer;
+        color: #000000;
+        font-size: 15px;
+        font-weight: bold;
+        padding: 10px 24px !important;
+        text-decoration: none;
+        text-shadow: 0px 1px 0px #ffffff;
+        width: 100px;
+        margin: 10px 10px 0 10px;
+
+        &:hover {
+            background: #f0f0f0;
+        }
+
+        &:active {
+            background: #f0f0f0;
+            position: relative;
+            top: 1px;
+        }
+    }
+}
+
+
+
+
+
+/*********** Boton enviar **************/
+
+.row {
+    display: flex;                               
+    justify-content: center;
+    z-index: 1;
+
+    &__btn {
+    text-align: center;
+    margin: 1em;
+	width: 5em;
+    padding: 0.5em;
+    background-color: #c1292e;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .1s ease all;
+        &:hover {
+        background-color: hsl(0, 0%, 40%);
+        }
+    }
+}
+
+
+
+    /* Estilos de los errores */
+
+    // .error {
+
+        // /* border: solid; */
+        // /* display: block; */
+    // }
+
+//     .error input {
+//         border: solid #bb2929;
+//         color: #bb2929;
+
+//         /* width: 100%; */
+//     }
+
+//     .error label {
+//         color: #bb2929;
+//         font-weight: bold;
+//     }
+
+//     .form__error-details {
+//         display: none;
+//         /* background-color: hsl(0, 64%, 90%);  */
+//         border-radius: 0.5em;
+
+//         color: #bb2929;
+//         padding: .5em;
+//         font-size: .8em;
+
+//     }
+
+// .error .form__error-details {
+//     /* border: solid greenyellow; */
+//     display: block;
+//     padding: 0;
+//     margin: 0;
+
+
+// }
+
+
+// @media (min-width: 425px) {
+//     .form {
+//         display: flex;
+//         flex-direction: row;
+//     }
+
+//     .form label {
+//         flex: none;
+//         display: block;
+//         margin-right: 20px;
+//         margin-left: 20px;
+//         width: 155px;
+
+//     }
+
+//     p {
+//         display: inline;
+//         margin-right: 40px;
+//         margin-left: 20px;
+//     }
+
+//     .form .form__input {
+//         flex: 1 1 auto;
+//         display: block;
+//         margin: auto 2.5em;
+
+
+//     }
+
+//     .form--column {
+//         flex-direction: column;
+//         justify-content: space-around;
+//     }
+
+//     .error .form__error-details {
+
+//         /* display: block; */
+//         flex-direction: column;
+//         padding: 0;
+//         margin: 0;
+
+
+//     }
+
+
+//     .form__radio {
+//         display: flex;
+//         align-items: center;
+//     }
+
+//     // .form__radio label {
+//         // /* background-color: #b72; */
+//     // }
+// }
+
+
+// @media (min-width: 768px) {
+//     .row-1 {
+//         /* border: solid rgb(24, 53, 24); */
+//         display: flex;
+
+
+//     }
+
+//     .form {
+//         /* border: solid #bb2998; */
+//         flex-direction: column;
+//         flex-basis: 50%;
+
+
+
+//     }
+
+//     // .form__input {
+//         // /* border: solid; */
+
+
+//     // }
+
+//     .row-2 {
+//         /* border: solid lime; */
+//         display: flex;
+
+//     }
+//     .form__radio {
+//         /* border: solid #b72; */
+//         flex-basis: 50%;
+//         flex-direction: row;
+//         align-items: center;
+
+//     }
+// }

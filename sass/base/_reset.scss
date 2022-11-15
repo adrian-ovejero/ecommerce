@@ -1,0 +1,30 @@
+
+*,
+*::before
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #14213d;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #555555;
+    background-color: #e5e5e5;
+    max-width: 1400px;
+    margin: auto;
+    width: 100%;
+}
+
+
+//verde #034732
+//azul #14213d
+//amarillo #fca311
+//gris #e5e5e5
+//rojo #c1292e

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/910e1d95fb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <input type="checkbox" class="main-nav-toggle" id="main-nav-toggle">
+    <div class="modal-backround" id="modalBack">
+        <div class="cart-modal-container" id="modal">
+            <!-- <div class="cart-modal-x">X</div> -->
+            <div class="modal-carrito">
+                <h3>Tu carrito</h3>
+                <button id="carritoCerrar"><i class="fa-solid fa-square-xmark"></i></button>
+                <div id="carrito-contenedor"></div>
+                <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+                <div class="btns-format">
+                    <form action="/cart" method="post">
+                        <button id="comprar-carrito" class="boton-agregar">Comprar</button>
+                    </form>
+                    <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------ Inicio Header ------------------->
+    <header class="main-header">
+        <div class="main-header__logo-container"></div>
+        <div class="main-header__search-form-container">
+            <form class="main-header__search-form" method="get" action="#">
+                <input type="search" name="kekyword" placeholder="Buscar...">
+                <!-- <label for="keyword">Buscar...............</label> -->
+                <button type="submit">Buscar</button>
+                <!-- <img src="img/iconos/search_icon.png" alt="" class="main-header__search-form-icon"> -->
+            </form>
+        </div>
+        <div class="main-header__cart-button-container">
+            <button id="btnCart"><span id="contadorCarrito">0</span></button>
+        </div>
+        <div class="main-header__hamburguer-button-container">
+            <label class="hamburguer-button" for="main-nav-toggle" title="Expandir barra de navegación">
+            <span class="hamburguer-button__top-bread"></span>
+            <span class="hamburguer-button__meat"></span>
+            <span class="hamburguer-button__bottom-bread"></span>
+            </label>
+        </div>
+        <div class="main-header__main-nav-container">
+            <nav class="main-nav">
+            <ul class="main-nav__list">
+                <li class="main-nav__item">
+                    <a class="main-nav__link" href="#/inicio">Inicio</a>
+                </li>
+                <li class="main-nav__item">
+                    <a class="main-nav__link" href="#/alta">Alta</a>
+                </li>
+                <li class="main-nav__item">
+                    <a class="main-nav__link" href="#/contacto">Contacto</a>
+                </li>
+                <li class="main-nav__item">
+                    <a class="main-nav__link" href="#/nosotros">Nosotros</a>
+                </li>
+            </ul>
+            </nav>
+        </div>
+    </header>
+    <!------------ Fin de Header ------------------->
+
+
+
+    <main class="main" id="main" data-id-script="uno"></main>
+
+    <!------------ Inicio de footer ------------------->
+    <footer class="main-footer">
+        <article class="main-footer__article">
+            <div class="main-footer__logo-container">
+            </div>
+            <div class="main-footer__content">
+                <h4>Juguetería Cósmica S.R.L.</h4>
+                <P>Ciut 30-25879654-3</P>
+                <P>Lavalle 343, Caba</P>
+            </div>
+        </article>
+
+        <article class="main-footer__article">
+            <div class="main-footer__card-container">
+                <h4>Compras</h4>
+                <ul>
+                    <li>Venta corporativa</li>
+                    <li>Medios de pago</li>
+                    <li>PLazos y costos de entrega</li>
+                    <li>Cambios y devoluciones</li>
+                    <li>Términos y devoluciones</li>
+                    <li>Promociones</li>
+                </ul>
+                
+            </div>
+        </article>
+
+        <article class="main-footer__article">
+            <div class="main-footer__card-container">
+                <h4>Nosotros</h4>
+                <ul>
+                    <li>Sucursales</li>
+                    <li>Información de marca</li>
+                    <li>Trabajá con nosotros</li>
+                    <li>Política de privacidad</li>
+                    <li>Trámites</li>
+                </ul>
+            </div>
+        </article>
+
+        
+        <article class="main-footer__article">
+
+
+            <div class="main-footer__content">
+                <h4>Redes sociales</h4>
+                    <div class="main-footer__icons">
+                        <span class="fa-brands fa-facebook-f"></span>
+                        <span class="fa-brands fa-instagram"></span>
+                        <span class="fa-brands fa-square-twitter"></span>
+                    </div>
+            </div>
+        </article>
+
+        <div class="main-footer__credits-card-container">
+            <p class="main-footer__copyright">Copyrigth © 2022. Juguetería Cósmica. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <!------------ Fin de footer ------------------->
+    
+
+    <script src="js/vendor/handlebars.min-v4.7.7.js"></script>
+
+    <script src="js/main.js" type="module"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+
+.main-footer {
+    // border: solid ;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-top: 5em;
+    justify-content: center;
+    position: relative;
+    // border: 8px solid green;
+    background-color: #14213d;
+
+
+
+    &__logo-container {
+        background-image: url('/img/productos/logo-jugueteria.png');
+        background-repeat: no-repeat;
+        background-size: 3em;
+        background-position: center;
+        width: 100%;
+        height: 4em;
+    }
+
+    &__article {
+
+        width: 70%;
+        border-bottom: 1px solid #fff;
+        text-align: center;
+
+        &:last-of-type {
+            border-bottom: none;
+        }
+
+        @media (min-width: 768px) {
+            border-bottom: none;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            flex-basis: 22%;
+            text-align: left;
+            margin-top: 2em;
+        }
+    }
+
+    &__content {
+        color: #fff;
+        font-size: 1.2em;
+    }
+
+    &__content h4 {
+        margin-bottom: 3em;
+    }
+    
+    &__card-container {
+        margin-bottom: 2em;
+        width: 100%;
+        color: #fff;
+    }
+
+    &__card-container li {
+        list-style: none;
+        margin-left: -2.5em;
+        margin-bottom: 1em;
+        margin-top: 1em;
+    }
+
+    &__card-container h4 {
+        font-size: 1.2em;
+        margin-bottom: 3em;
+    }
+
+
+    &__icons {
+        display: flex;
+        color: #fff;
+        font-size: 1.5em;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+
+    &__credits-card-container {
+        display: flex;
+        background-color: #e5e5e5;
+        width: 100%;
+        height: 5em;
+        text-align: center;
+        background-image: url('https://imgmp.mlstatic.com/org-img/banners/ar/medios/575X40.jpg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+
+        &>p {
+            margin-top: 10em;
+            margin-bottom: 0.5em;
+            padding-top: 2em;
+            font-size: 0.8em;
+            color: #969696;
+        }
+    }
+}
+
+
+
+

@@ -1,0 +1,85 @@
+
+.about-us {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    gap: 1em;
+    border: solid #14213d;
+    border-radius: 5px;
+    box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    width: 75%;
+    margin: 0 auto;
+    padding: 10px;
+    flex-direction: column;
+
+    &__contain {
+        width: 70%;
+        position: relative;
+        display: flex;
+        gap: 2px;
+        flex-direction: column;
+        margin: 0 auto;
+
+        & p {
+            font-size: large;
+
+        }
+    }
+
+}
+
+.header-about-us {
+    margin: 10px;
+    text-align: center;
+    margin: 2em;
+    position: relative;
+    z-index: 1;
+}
+
+.article-about-us::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fca311;
+    clip-path: circle(250px at 80% 20%);
+    transition: 0.5s ease-in-out;
+    border-radius: 5px;
+    position: fixed;
+    
+
+}
+
+//body { margin:10px; background-image: url("../images/wall.jpg"); }
+
+.container {
+  width:800px;
+  margin:0 auto;
+}
+
+.barra {
+  background-color:#000000;
+  color: #ffffff;
+  font-size: 20px;
+  height: 20px; width: 700px;
+}
+#my_canvas{ 
+  background:#000000; 
+  border:#000 1px solid; 
+}
+.boton{
+    color:red;
+    font-size: 40px;
+    background-color: #000000;
+    cursor: pointer;
+    border-radius: 8px;
+    border:2px solid blue;
+}
+.boton:hover{
+    background-color: white;
+    color: #000000;
+}

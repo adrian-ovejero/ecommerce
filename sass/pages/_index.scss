@@ -1,0 +1,145 @@
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+    position: relative;
+}
+
+.section-cards__header {
+    margin: 10px;
+    text-align: center;
+    margin: 2em;
+    position: relative;
+    z-index: 1;
+}
+
+
+.card-container .card {
+    position: relative;
+    width: 390px;
+    height: 460px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.card-container .card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fca311;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+    border-radius: 5px;
+}
+
+.card-container .card:hover {
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.card-container .card:hover:before {
+    clip-path: circle(300px at 70% -20%);
+    border-radius: 10px;
+}
+
+.card-container .card .card__image-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    transition: .7s;
+}
+
+.card-container .card:hover .card__image-container {
+    top: -1%;
+    transform: translateY(-25%);
+}
+
+.card-container .card .card__image-container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+}
+
+.card-container .card .card__content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 900;
+}
+
+.card-container .card:hover .card__content {
+    height: 210px;
+}
+
+.card-container .card .card__content h2 {
+    font-size: 1.2em;
+    position: relative;
+    font-weight: 600;
+    margin: -5px;
+    padding: -10;
+}
+
+h3 {
+    color: #c1292e;
+    font-weight: 600px;
+    font-size: 2em;
+    margin-top: 5px;
+}
+.card-container .card .card__content .card__description {
+    display: flex;
+    margin: 0px;
+    flex-direction: column;
+    align-items: center;
+    padding: 4px 4px;
+    transition: .5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.card-container .card:hover .card__content .card__description {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: .2s;
+}
+
+.card-container .card .card__content .card__description,
+.card-container .card .card__content .card__description h3 {
+    margin-top: -35px;
+    font-weight: 300;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.card-container .card .card__link {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #c1292e;
+    border-radius: 4px;
+    overflow: hidden;
+    text-decoration: none;
+    font-weight: 600;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: .5s;
+}
+
+.card-container .card:hover .card__link {
+    opacity: 1;
+    transform: translateY(-5px);
+    transition-delay: .3s;
+    cursor: pointer;
+
+}
+

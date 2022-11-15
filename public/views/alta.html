@@ -1,0 +1,150 @@
+<div class="product-registration">
+    <h1>Ingreso de productos</h1>
+</div> 
+
+<section class="section-product-form">
+    <h2>Formulario</h2>
+    <div class="product-form-container">
+        <form action="/api/products" method="post" id="mainForm" class="form" enctype="multipart/form-data">
+            <input type="hidden" id="id" name="id">
+            <input type="hidden" id="cantidad" name="cantidad" placeholder="1" value="1">
+            <div class="form__product" id="nameGroup">
+                <label for="name" class="form__product-label">Nombre:</label>
+                <input type="text" id="name" name="name" class="form__product-input">
+                <div class="main-form__input-error">
+                    <p>Soporta caracteres utilizados en el idioma 
+                        español, con y sin acentuaciones. También números, puntos, comas, comillas 
+                        simples y dobles, espacios, barras, guiones medios y bajos. 30 caracteres como 
+                        máximo.                            
+                    </p>
+                </div>
+            </div>
+
+            <div class="form__product">
+                <label for="price" class="form__product-label">Precio:</label>
+                <input type="text" id="price" name="price" class="form__product-input">
+                <div class="main-form__input-error">
+                    <p>Campo numérico positivo con o sin decimales.</p>
+                </div>
+            </div>
+
+            <div class="form__product">
+                <label class="form__product-label" for="form__product-stock">Stock</label>
+                <input class="form__product-input" id="form__product-stock" type="number" name="stock" min="0" required>
+                <div class="main-form__input-error">
+                    <p>Campo numérico positivo o cero, sin decimales.</p>
+                </div>
+            </div>
+
+            <div class="form__product form__product-brand">
+                <label  for="brand">Marca</label>
+                <select class="form__product-select" name="brand" id="brand" required>
+                    <option value="">Elige una opción</option>
+                    <option value="1">Lego</option>
+                    <option value="2">Cry babies</option>
+                    <option value="3">Barbie</option>
+                    <option value="4">Rasti</option>
+                    <option value="5">Hasbro</option>
+                </select>
+                <div class="main-form__input-error">
+                    <p>Soporta caracteres utilizados en el idioma 
+                        español, con y sin acentuaciones. También números, puntos, comas, comillas 
+                        simples y dobles, espacios, barras, guiones medios y bajos. 40 caracteres como 
+                        máximo.                            
+                    </p>
+                </div>
+            </div>
+
+            <div class="form__product form__product-category">
+                <label for="category">Categoría</label>
+                <select class="form__product-select" name="category" id="category" required>
+                    <option value="">Elige una opción</option>
+                    <option value="1">Juegos de mesa</option>
+                    <option value="2">Muñecas</option>
+                    <option value="3">puzzles</option>
+                    <option value="4">juegos de ingenio</option>
+                </select> 
+                <div class="main-form__input-error">
+                    <p>Soporta caracteres utilizados en el idioma 
+                        español, con y sin acentuaciones. También números, puntos, comas, comillas 
+                        simples y dobles, espacios, barras, guiones medios y bajos. 50 caracteres como 
+                        máximo.                            
+                    </p>
+                </div>
+            </div>
+
+            <div class="form__product">
+                <label class="form__product-label--textarea" for="description">Descripción corta</label>
+                <textarea class="form__product-input--textarea" name="description" id="description" minlength="10" maxlength="100" required></textarea>
+                <div class="main-form__input-error">
+                    <p>Texto libre de hasta 80 caracteres como máximo.</p>
+                </div>
+            </div>
+            <div class="form__product">
+                <label class="form__product-label--textarea" for="longDescription">Descripción larga</label>
+                <textarea class="form__product-input--textarea" name="longDescription" id="longDescription" rows="6" minlength="10" maxlength="400" required></textarea>
+                <div class="main-form__input-error">
+                    <p>Texto libre de hasta 2000 caracteres como máximo.</p>
+                </div>
+            </div>
+
+            <div class="form__product form__product-shipping">
+                <label for="freeShipping">Envío sin cargo</label>
+                <select class="form__product-select" name="freeShipping" id="free-shipping">
+                    <option value="yes">Si</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <div class="form__product">
+                <label class="form__product-label" for="miAge">Edad desde</label>
+                <input class="form__product-input" type="number" name="minAge" id="minAgeId" min="0" required>
+                <div class="main-form__input-error">
+                    <p>La edad debe de ser de un valor entre 0 a 9. Puede expresar la edad de la persona con el valor decimal que representa su edad. Por ejemplo: 1.5 es equivalente a 1 año y 6 meses.</p>
+                </div>
+            </div>
+            <div class="form__product">
+                <label class="form__product-label" for="maxAge">Edad hasta</label>
+                <input class="form__product-input" type="number" name="maxAge" id="maxAgeId" min="2" required>
+                <div class="main-form__input-error">
+                    <p>La edad debe de ser de un valor entre 10 a 100. Puede expresar la edad de la persona con el valor decimal que representa su edad. Por ejemplo: 12.5 es equivalente a 12 años y 6 meses.</p>
+                </div>
+            </div>
+
+
+            <div class="form__product">
+                <label for="img">Foto</label>
+                <input type="file" name="img" id="imageId">
+                <div class="main-form__input-error">
+                    <p>Debe de subir una imagen con extensión jpg, jpeg, png o gif.</p>
+                </div>
+            </div>
+            <div class="form__product">
+                <label for="cantidad">Cantidad: </label>
+                <input type="text" id="cantidad" name="cantidad" class="cantidad-value-reset" value="1" disabled>
+            </div>
+            
+        
+            <div class="row">
+                <button id="btn-create" class="row__btn">Crear</button>
+                <button type="button" id="btn-update" class="row__btn" disabled>Guardar</button>
+                <button type="button" id="btn-cancel" class="row__btn" disabled>Cancelar</button>
+            </div>
+
+        </form>
+        <br>
+        <br>
+        <div class="section-product-form">
+            <form method="post" action="http://127.0.0.1:8080/upload" enctype="multipart/form-data">
+                <input type="file" name="img" required>
+                <button>Enviar</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section class="section-products-table">
+    <h2>Listado de productos</h2>
+    <div class="products-table-container"></div>
+</section>
+

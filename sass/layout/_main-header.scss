@@ -1,0 +1,171 @@
+
+
+.main-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #14213d;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+
+    @media (min-width: 1400px) {
+        height: 6em;
+    }
+    
+
+    &__logo-container {
+
+        background-image: url('../img/productos/logo-jugueteria.png');
+        background-repeat: no-repeat;
+        background-size: 4em;
+        padding: 0.01em;
+        flex-basis: 5em;
+        order: 2;
+        cursor: pointer;
+
+
+        @media (min-width: 1024px) {
+            flex-basis: 1em;
+            order: 1;
+            flex-basis: 6em;
+            margin-left: 1em;
+            margin-top: 0.5em;
+        }
+
+        @media (max-width: 369px) {
+            /* order: 1; */
+            /* margin: auto; */
+            
+        }
+    }
+
+    &__search-form-container {
+        padding: 1em;
+        flex-grow: 1;
+        width: 60px;
+        order: 2;
+
+        @media (min-width: 768px) {
+            order: 3;
+            flex-basis: 10em;
+            flex-grow: 0;
+            flex-shrink: 1;
+            
+        }
+    }
+
+    &__search-form {
+        background-color: #fff;
+        color: #555;
+        display: flex;
+        width: 100%;
+        padding: 2px;
+        border-radius: 5px;
+        margin: auto;
+        }
+
+    &__cart-button-container {
+        background-image: url('../img/productos/bag_cart_icon.png');
+        background-repeat: no-repeat;
+        background-size: 2em;
+        background-position: right;
+        order: 5;
+        width: 2.5%;
+        margin-right: 20px;
+        padding: 1em;
+        cursor: pointer;
+
+
+        @media (min-width: 768px) {
+            order: 3;
+        }
+    }
+
+    &__cart-button-container--pressed {
+        box-shadow: 1 1px 15px rgba(1, 1, 0, .9);
+    }
+
+    &__hamburguer-button-container {
+        margin-bottom: auto;
+        margin-top: auto;
+        padding: 0.4em;
+        margin-left: 0.2em;
+        margin-right: 0.4em;
+        
+        &:hover {
+            background-color: rgb(62, 73, 96);
+            border-radius: 50%;
+            transition: all 0.4s ease;
+        }
+        
+
+        @media (min-width: 768px) {
+            display: none;
+        }
+    }
+
+    &__main-nav-container {
+        flex-basis: 100%;
+        display: none;
+        flex-grow: 1;
+        transition: all 0.7s ease;
+        
+        @media (min-width: 768px) {
+            flex-basis: auto;
+            flex-grow: 1;
+            order: 2;
+            display: block;
+        }
+
+        @media (min-width: 1024px) {
+            order: 1;
+        }
+        
+    }
+}
+
+
+
+input[type='search'] {
+    width: 90%;
+    border: none;
+    background: transparent;
+    margin: 0;
+    padding: 7px 8px;
+    color: inherit;
+    border-radius: inherit;
+    }
+
+        
+input[type="search"]::placeholder {
+    color: #aaa;
+    }
+
+    button[type="submit"] {
+        text-indent: -999px;
+        overflow: hidden;
+        width: 30px;
+        padding: 0;
+        margin: 0;
+        border: 1px solid transparent;
+        border-radius: inherit;
+        background: transparent url('/img/productos/search_icon.png') no-repeat right;
+        cursor: pointer;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: right;
+        }
+
+        
+button[type="submit"]:hover {
+    opacity: 1;
+    }
+
+button[type="submit"]:focus,
+input[type="search"]:focus {
+    outline: none;
+}
+
+
